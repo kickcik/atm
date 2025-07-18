@@ -12,7 +12,7 @@ while (num := input('기능 선택| 1.입금, 2.출금, 3.영수증 보기, 4. �
 
     if num == '2':
         try:
-            if (withdraw_amount := min(int(input('출금할 금액을 입력해주세요: ')), balance)) > 0:
+            if (withdraw_amount := min(int(input('출금할 금액을 입력해주세요: ')), balance)) >= 0:
                 print(f'출금액 : {withdraw_amount:,}원')
                 balance -= withdraw_amount
                 print(f'현재 잔액 : {balance:,}원')
